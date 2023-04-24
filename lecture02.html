@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM</title>
+	<script>
+		/*function hello()
+		{
+			const header = document.querySelector('h1');
+			if(header.innerHTML==='Hello!')
+			{
+				header.innerHTML='Goodbye!';
+			}
+			else 
+			{
+				header.innerHTML='Hello!';
+			}
+			//console.log('Test');
+
+		}*/
+		let counter = 0;
+		function count()
+		{
+			counter++;
+			document.querySelector('h1').innerHTML=counter;
+			if(counter%10==0)
+				alert(`Count now is ${counter}`); 
+		}
+	</script>
+</head>
+<body>
+<!--<h1>Hello!</h1>
+<button onclick="hello()">Click Here</button> -->
+<h1>0</h1>
+<button onclick="count();">Count</button>
+</body>
+</html>

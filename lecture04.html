@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM4</title>
+	<script>
+		/*document.addEventListener('DOMContentLoaded',function(){
+			document.querySelector('form').onsubmit = function(){
+				const name = document.querySelector('#name').value;
+				alert(`Hello ${name}`);
+			};
+		});*/
+		document.addEventListener('DOMContentLoaded',function(){
+			document.querySelectorAll('button').forEach(function(button){
+				button.onclick=function(){
+					document.querySelector('#hello').style.color=button.dataset.color;
+				}
+			});
+		});
+
+		document.addEventListener('DOMContentLoaded',()=>{
+			document.querySelectorAll('button').forEach(button =>{
+				button.onclick=()=>{
+					document.querySelector('#hello').style.color=button.dataset.color;
+				}
+			});
+		});
+
+	</script>
+</head>
+<body>
+<!--<form>
+	<input type="text" name="name" id="name" autofocus placeholder="Taste me">
+	<input type="submit" value="Submit">
+</form>-->
+<h1 id="hello">Hello</h1>
+<button data-color="red">Red</button>
+<button data-color="blue">Blue</button>
+<button data-color="green">Green</button>
+</body>
+</html>

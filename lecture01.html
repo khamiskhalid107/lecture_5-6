@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>This is Javascript Basic Lecture</title>
+	<script>
+		//alert("This is Lecture");
+		let counter = 0;
+		function count()
+		{
+			counter++;
+			alert(counter);
+			console.log("Everything okay");
+		}
+		//var myarray = ['cars',2,true];
+		//console.log("The value of my array is "+myarray[1]);
+		//console.log(myarray.length);
+		/*var myArray = ['train','car','bike','scooter'];
+		var vehicle = myArray.pop();
+		console.log(vehicle);
+		console.log(myArray);
+		*/
+		/*var person = {
+			name:"Omar Ali",
+			age:25,
+			isMale:true,
+			personality: [
+			'patient','loyal','happy'
+			],
+			company: {
+				name:"SUZA",id:2333
+			}
+		}
+		console.log(person.age);
+		console.log(person['company'].id);
+			*/
+			//function
+			function factorial(n)
+			{
+				let product =1;
+				for(let i=1;i<=n;i++)
+				{
+					product *=i;
+				}
+				return product;
+			} 
+
+			let f = factorial(5);
+			//console.log(f);
+
+			var nums = [4,8,12,2];
+			/*for(var i=0;i<nums.length;i++)
+			{
+				console.log(nums[i]);
+			}*/
+
+			/*function print(n)
+			{
+				console.log(n);
+			}
+			nums.forEach(print);*/
+
+			let add = function(a,b)
+			{
+				return a+b;
+			}
+			console.log(add(2,3));
+
+			let bitam = {
+				name:'Is-haka',
+				age:23,
+				greetings:function(){
+					return 'Hello! nice to meet you';
+				}
+			}
+			console.log(bitam.greetings());
+
+			//object Prototypes
+			function Person(name,age) //prototype
+			{
+				this.name=name;
+				this.age=age;
+				this.greeting = function()
+				{
+					return 'Hello !, My name is '+this.name;
+				}
+			}
+
+			let khamis = new Person('Khamis',24);
+			console.log(khamis.greeting());
+
+
+			function Student(name,age,school)
+			{
+				this.__proto__ = new Person(name,age);
+				this.school=school;
+			}
+			let hannat = new Student('Hannat',22,'SCCM');
+			console.log(hannat.greeting());
+
+
+			//DOM-Document Object Model
+
+	</script>
+</head>
+<body>
+	<h1>Hello</h1>
+	<button onclick="count()">Click</button>
+</body>
+</html>
