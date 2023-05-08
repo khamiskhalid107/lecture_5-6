@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            fetch('http://139.162.12.176:4050/gala/zanzibar/api/v1/school/yueyuwerwe/')
+            .then(response=>response.json())
+            .then(data=>{
+                console.log(data);
+            })
+            .catch(error =>{
+                console.error('Error fetching data',error);
+            })
+        })
+    </script>
+
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('https://api.example.com/data');
+                const data = await response.json();
+                console.log(data);
+            } catch (error) {
+                console.error(error);
+            }
+}
+    </script>
+
+
+    <script>
+        /*fetch('https://example.com/api/data', {
+        headers: {
+            'Authorization': 'Bearer ' + token
+        }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Do something with the data
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });*/
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
